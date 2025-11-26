@@ -10,11 +10,9 @@ class Residential_buildings:
         Residential_buildings.houses.append({"house": self.house, "rooms": self.rooms, "beds": self.beds, "soldiers": self.soldiers})
         Residential_buildings.count += 1
         
-    def add_sold_for_room(house: dict, soldier: dict):
-        Residential_buildings.houses[house[""]]
-        Residential_buildings.houses[house_nam].append((soldiers[beds], f"House {Residential_buildings.houses["house"]}, room {room + 1}"))
+    def add_sold_for_room(house_index: int, soldier: dict): #הוספת חייל לחדר 
+        Residential_buildings.houses[house_index]["soldiers"].append(soldier)
         
-
-"""
-houses = [{"house": 1, "rooms": 10, "beds": 8, "soldiers": []}]
-"""
+    def print_houses(): #הדפסת כל הדירות 
+        for house in Residential_buildings.houses:
+            print(house)
